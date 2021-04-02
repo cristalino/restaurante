@@ -10,37 +10,40 @@
     </h:head>
     
     <h:body style="padding: 50px">
+        
+        <h1>Sistema Restaurante - Controle de Entrada e Saída</h1>
+        
         <h:form id="formRestaurante">
             <h:panelGrid columns="6">
-                <h:outputLabel value="LIMITE " style= "background-color: #ffc107; color: black; font-size: 20px; padding: 16px;"/>
+                <h:outputLabel value="LIMITE DE PESSOAS" style= "background-color: #ffc107; color: black; font-size: 20px; padding: 16px;"/>
                 <h:outputLabel value="#{contador.limitePessoas}"  class="border border-warning" style= "background-color: #e7e7e7; color: black; font-size: 20px; padding: 16px"/>
                 
-                <h:outputLabel value="PRESENTE "  style= "background-color: #198754; color: white; font-size: 20px; padding: 16px"/>
+                <h:outputLabel value="PRESENTES ATÉ O MOMENTO "  style= "background-color: #198754; color: white; font-size: 20px; padding: 16px"/>
                 <h:outputLabel value="#{contador.qtdePresentes}" class="border border-success" style= "background-color: #e7e7e7; color: black; font-size: 20px; padding: 16px"/>
                 
-                <h:outputLabel value="TOTAL "  style= "background-color: #dc3545; color: white; font-size: 20px; padding: 16px"/>
+                <h:outputLabel value="TOTAL NO DIA"  style= "background-color: #dc3545; color: white; font-size: 20px; padding: 16px"/>
                 <h:outputLabel value="#{contador.mostrarRelatorio()}" class="border border-danger" style= "background-color: #e7e7e7; color: black; font-size: 20px; padding: 16px;"/>
             </h:panelGrid>
             
-            <h:panelGrid columns="4" style="background-color:#e7e7e7; margin-top:2em;">
+            <h:panelGrid columns="4" style="background-color:#ffffff; margin-top:2em;">
                 
                 <h:outputLabel value="Limite:"/>
                 <h:inputText value="#{contador.limitePessoas}" required="true"/>
-                <h:commandButton value="Registrar" class="btn btn-outline-warning"  action="#{contador.ContadorDePessoas(contador.limitePessoas)}"/>
+                <h:commandButton value="Registrar Limite  " class="btn btn-warning"  action="#{contador.ContadorDePessoas(contador.limitePessoas)}"/>
                 <h:outputLabel value="#{contador.mensagemLimite}"/>
                
                 <h:outputLabel value="Entrada:"/>
                 <h:inputText value="#{contador.auxEntrada}"/>
-                <h:commandButton value="Registrar" class="btn btn-outline-success"  action="#{contador.registraEntrada(contador.auxEntrada)}"/>
+                <h:commandButton value="Registrar Entrada" class="btn btn-success"  action="#{contador.registraEntrada(contador.auxEntrada)}"/>
                 <h:outputLabel value="#{contador.mensagemEntrada}"/>
                  
                 <h:outputLabel value="Saída:"/>
                 <h:inputText value="#{contador.auxSaida}"/>
-                <h:commandButton value="Registrar" class="btn btn-outline-danger"  action="#{contador.registraSaida(contador.auxSaida)}"/>
+                <h:commandButton value="Registrar Saída   " class="btn btn-danger"  action="#{contador.registraSaida(contador.auxSaida)}"/>
                 <h:outputLabel value="#{contador.mensagemSaida}"/>
-                 
-                <h:commandButton value="LIMPAR" class="btn btn-primary btn-lg btn-block"  action="#{contador.limpar()}" style="margin-top: 1em; font-size: 16px;border-radius: 4px;"/>
             </h:panelGrid>
+            
+                <h:commandButton value="LIMPAR" class="btn btn-outline-primary"  action="#{contador.limpar()}" style="margin-top: 1em; font-size: 16px;border-radius: 4px; width: 400px;"/>
         </h:form>
     </h:body>
 </html>
