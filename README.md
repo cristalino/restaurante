@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🔖 Objetivo
 
 <div id="Objetivo">
-Esse projeto foi realizado com o objetivo de colocar em prática o que aprendi no Modulo 1 - Fundamentos - Desenvolvedor(a) Full Stack, do Bootcamp Dev Fullstack do IGTI- Instituto de Gestão e Tecnologia da Informação.
+Esse Projeto da Faculdade foi realizado com o objetivo de criar um sistema simples para um Restaurante, onde o mesmo tornaria possível o controle da entrada e saída dos clientes.
 </div>
 
 <div align="center">
