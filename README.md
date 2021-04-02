@@ -6,7 +6,7 @@
 </p>
 <br>
 
-## 🔖 Demonstração
+## 🔎 Demonstração
 
 ![Captura de tela 2021-04-01 210806](https://user-images.githubusercontent.com/48533900/113366325-3b25a180-932f-11eb-92f2-74648b5337cf.png)
 
